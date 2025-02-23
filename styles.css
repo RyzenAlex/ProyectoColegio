@@ -45,7 +45,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('colegio.webp') center/cover;
+    background: url('Colegio.webp') center/cover;
     opacity: 0.9;
     z-index: -1;
 }
