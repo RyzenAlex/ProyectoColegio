@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Educativa Shushufindi</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Logo UE Shushufindi">
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Abrir menú">
+            <ul class="nav__links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero container">
+            <div class="hero__content">
+                <h1>Unidad Educativa Shushufindi</h1>
+                <p>Formando líderes del mañana con excelencia académica y valores</p>
+                <a href="#admisiones" class="btn btn--primary">Proceso de Admisión</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="nosotros" class="about">
+            <div class="container">
+                <h2>Bienvenidos a Nuestra Institución</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>Somos una institución educativa comprometida con la excelencia académica y la formación integral de nuestros estudiantes desde 1985.</p>
+                        <ul class="about__features">
+                            <li>Educación Inicial, Básica y Bachillerato</li>
+                            <li>Docentes altamente calificados</li>
+                            <li>Instalaciones modernas</li>
+                            <li>Programas extracurriculares</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta" class="programs">
+            <div class="container">
+                <h2>Oferta Académica</h2>
+                <div class="services__grid">
+                    <div class="service__card">
+                        <img src="Primaria.webp" alt="Primaria">
+                        <h3>Educación Básica</h3>
+                        <p>Formación fundamental para estudiantes de 1° a 7° grado</p>
+                    </div>
+                    <div class="service__card">
+                        <img src="Secundaria.webp" alt="Secundaria">
+                        <h3>Educación Secundaria</h3>
+                        <p>Preparación académica de 8° a 10° grado</p>
+                    </div>
+                    <div class="service__card">
+                        <img src="Bachillerato.webp" alt="Bachillerato">
+                        <h3>Bachillerato</h3>
+                        <p>Especialidades en Ciencias y Técnico</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="admisiones" class="admissions">
+            <div class="container">
+                <h2>Proceso de Matriculacion</h2>
+                <div class="admissions__content">
+                    <ol class="admissions__steps">
+                        <li>Solicitud de información</li>
+                        <li>Entrega de documentación</li>
+                        <li>Evaluación diagnóstica</li>
+                        <li>Entrevista familiar</li>
+                        <li>Matrícula</li>
+                    </ol>
+                    <a href="#contacto" class="btn btn--primary">Iniciar Proceso de Matriculacion</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Información de Contacto</h2>
+                <form class="contact__form">
+                    <input type="text" placeholder="Nombre del representante" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="tel" placeholder="Teléfono" required>
+                    <select required>
+                        <option value="">Seleccione el nivel educativo</option>
+                        <option value="inicial">Educación Inicial</option>
+                        <option value="basica">Educación Básica</option>
+                        <option value="bachillerato">Bachillerato</option>
+                    </select>
+                    <textarea placeholder="Mensaje o consulta" required></textarea>
+                    <button type="submit" class="btn btn--primary">Enviar Consulta</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>Unidad Educativa Shushufindi</p>
+                    <p>Dirección: Av. Principal Shushufindi</p>
+                    <p>Teléfono: (06) 2839-000</p>
+                    <p>Email: info@ueshushufindi.edu.ec</p>
+                </div>
+                <p class="footer__copyright">&copy; 2024 UE Shushufindi. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Menú móvil
+        document.querySelector('.nav__toggle').addEventListener('click', function() {
+            document.querySelector('.nav__links').classList.toggle('active');
+            this.innerHTML = this.innerHTML === '☰' ? '✕' : '☰';
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav__links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav__links').classList.remove('active');
+                document.querySelector('.nav__toggle').innerHTML = '☰';
+            });
+        });
+    </script>
+</body>
+</html>
